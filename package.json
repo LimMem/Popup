@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "react-Popup",
+  "name": "react-popup",
   "version": "0.1.0",
   "scripts": {
     "start": "dumi dev",
@@ -42,13 +42,20 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "resolutions": {
+    "@types/react": "^16.14.2"
+  },
   "dependencies": {
-    "react": "^16.12.0",
+    "@types/react-transition-group": "^4.4.2",
+    "ahooks": "^2.9.6",
     "antd-mobile": "^2.3.4",
-    "ahooks": "^2.9.6"
+    "dom-helpers": "^5.2.1",
+    "react": "^16.12.0",
+    "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
     "@umijs/test": "^3.0.5",
+    "babel-plugin-version": "^0.2.3",
     "dumi": "^1.1.26",
     "dumi-theme-mobile": "^1.1.9",
     "father-build": "^1.17.2",

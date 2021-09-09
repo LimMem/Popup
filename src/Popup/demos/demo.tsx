@@ -1,5 +1,5 @@
 import React, { FC, useState, useRef, useEffect, useMemo } from 'react';
-import { Popup } from '@alitajs/antd-mobile-plus';
+import Popup from 'react-popup';
 import { Icon } from 'antd-mobile';
 import { popupList } from './data';
 import './index.less';

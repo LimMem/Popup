@@ -1,6 +1,5 @@
 import React, { FC, useMemo, useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { withError, useTracker } from '@alitajs/tracker';
 import Icon from 'antd-mobile/es/icon';
 import Transition, { TransitionProps } from './components/Transition';
 import { useClickAway, useUnmount, useEventListener } from 'ahooks';
@@ -33,11 +32,9 @@ const Popup: FC<PopupType> = ({
   custom = false,
   ...otherProps
 }) => {
-  const log = useTracker(Popup.displayName, {});
   const topRef = useRef(null);
-  const [aOverlayStyle, setAOverlayStyle] = useState<
-    TransitionProps['overlayStyle']
-  >();
+  const [aOverlayStyle, setAOverlayStyle] =
+    useState<TransitionProps['overlayStyle']>();
   useMemo(() => {
     if (show) {
       const topEle: HTMLElement | null = topRef.current;
@@ -50,7 +47,6 @@ const Popup: FC<PopupType> = ({
   }, [show]);
 
   const aClose = () => {
-    log('onClose');
     onClose();
   };
   // 点击awayRef之外的区域关闭弹出框
@@ -117,4 +113,4 @@ const Popup: FC<PopupType> = ({
 };
 
 Popup.displayName = 'Popup';
-export default withError(Popup);
+export default Popup;

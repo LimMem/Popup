@@ -1,7 +1,6 @@
 import React, { FC, CSSProperties, useState, useMemo } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import classnames from 'classnames';
-import { withError, useTracker } from '@alitajs/tracker';
 import './index.less';
 
 export interface TransitionProps {
@@ -168,4 +167,4 @@ const Transition: FC<TransitionProps> = ({
 };
 
 Transition.displayName = 'Transition';
-export default withError(Transition);
+export default Transition;
