@@ -1,0 +1,35 @@
+@import '~@alitajs/theme/es/index.less';
+@import '~antd-mobile/es/icon/style/index.less';
+
+@prefixCls: alita-popup;
+
+.@{prefixCls} {
+  &-flow-hidden {
+    overflow: hidden !important;
+  }
+  &-inview {
+    position: relative;
+    background-color: #fff;
+  }
+  &-close {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    &-top-right {
+      right: 12 * @hd;
+      top: 12 * @hd;
+    }
+    &-top-left {
+      left: 12 * @hd;
+      top: 12 * @hd;
+    }
+    &-bottom-left {
+      left: 12 * @hd;
+      bottom: 12 * @hd;
+    }
+    &-bottom-right {
+      right: 12 * @hd;
+      bottom: 12 * @hd;
+    }
+  }
+}
